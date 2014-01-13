@@ -1,0 +1,254 @@
+---
+layout: default
+title: Configuring OpenCounter for your Community
+slug: configuration
+lead: "A Section-by-Section overview of how to configure and use OpenCounter."
+base_url: "../"
+---
+
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="admin-dashboard-section">Dashboard</h1>
+    </div>
+    <p class="lead">The Dashboard provides your organization with a high-level overview of permit application activity in your community.</p>
+
+    <p>The Dashboard has four primary components:</p>
+    <ul>
+      <li>An adjustable timeline</li>
+      <li>Top-level metrics during the selected timeframe</li>
+      <li>A map of permit applications during the selected timeframe.</li>
+      <li>A list of all permit applications during the selected timeframe</li>
+    </ul>
+
+    <p>Taken together, these four components create a portrait of business activity in your community.</p>
+
+    <p>Adjust the timeframe of data reported by clicking on either end of the light blue area within the timeline at the top of the pages. Data across the rest of th page will update accordingly</p>
+
+    <p>Along with the number of Permit Applications initiated and submitted, OpenCounter estimates the total number of jobs created and fees incurred, based on information provided by applicants.</p>
+
+    <p>You can also see the status of all applications that exist within the timeframe selected, along with the contact e-mail for each Permit Applicant. To get more details about any particular application, click on the unique "ID" on the left-hand side of the table.</p>
+  </div>
+
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="admin-applications-section">Applications</h1>
+    </div>
+    <p class="lead">Here you can find details about all OpenCounter Applications in your community, along with associated Admin interactions and Forms.</p>
+
+    <p>The Applications home page is composed of two tables, one displaying all submitted--or finalized--applications, and another showing those still in progress. Each table displays a few high-level attributes such as the business name, the number of answers provided to date, and contact information for the Permit Applicant. Admin users can attach notes to communicate with one another, or view each application in detail.</p>
+
+    <p>On each individual Application page, you'll find a map showing the proposed business location, a table of fees incurred based on application responses, the information provided in response to each Field, and the sequence of Pages visited by the Applicant.</p>
+
+    <p>In the "Downloads" section toward the bottom of the page, you'll find links to download the "Full Application & GIS Response", as well as any Forms that Admin Users have created. These Forms are composed of select groups of Applicant answers, often corresponding to Existing Permit Forms used within Departments.
+
+  </div>
+
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="admin-section-section">Sections</h1>
+    </div>
+    <p class="lead">Sections are broad groups of Pages. Their primary purpose is to help applicants understand what kinds of information they’ll be asked to provide. They also serve as milestones for applicant as they proceed through the permitting process.</p>
+
+<!--     <h3>Any reason for a subheader here?</h3> -->
+
+    <p>Some common Sections titles include:</p>
+    <ul>
+      <li>A “Team” Section for Pages that contain Fields asking for information about the applicants themselves.</li>
+      <li>A “Location” Section for Pages that contain Fields asking for information about the prospective location of the business seeking a permit.</li>
+    </ul>
+
+    <p>You can re-arrange Sections to appear in the sequence you prefer. Just drag them up and down the list using the XX symbol</p>
+
+    <p>You can also re-arrange the Pages within each Section---and Fields within each Page--using the same technique. </p>
+
+    <p>You can also upload properly structured .csv file to create a new set of Sections entirely</p>
+
+<!--     <div class="bs-callout bs-callout-info">
+      <h4></h4>
+      <p></p>
+    </div>
+ -->
+  </div>
+
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="admin-pages-section">Pages</h1>
+    </div>
+    <p class="lead">Pages are just what they sound like---single web pages that Applicant’s view one at a time. You can show them to Applicants based on Visibility Rules.</p>
+
+    <p>Each Page is home to one or more Field---that is, one or more piece of information you are asking for from the Applicant. Pages typically host Fields that are related---and thus are titled to reflect a common topic.</p>
+
+    <p>Some common Page titles include:</p>
+      <ul>
+  		  <li>Building Owner - this Page might include Fields such as:</li>
+        <ul>
+    			<li>Property Owner First Name</li>
+    			<li>Property Owner Last Name</li>
+    			<li>Property Owner Address</li>
+    			<li>...and so on.</li>
+        </ul>
+    		<li>Business Tax and Licsensing - this Page might include fields such as:</li>
+        <ul>
+    			<li>Business License Application Type</li>
+    			<li>Business License Exemption Type</li>
+    			<li>Business License Expiration</li>
+    			<li>...and so on.</li>
+        </ul>
+    		<li>Major Use Permit - this Page might include fields such as:</li>
+        <ul>
+    			<li>Business Parking Spaces</li>
+    			<li>Building Stories</li>
+    			<li>Parcel Prior Use</li>
+    			<li> ...and on on.</li>
+        </ul>
+      </ul>
+
+	<p>You can also add an Introduction, some Additional Text, and Page Instructions to help the Applicant provide information to each Field.</p>
+
+<!--     <div class="bs-callout bs-callout-info">
+      <h4></h4>
+      <p></p>
+    </div> -->
+
+  </div>
+
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="admin-fields-section">Fields</h1>
+    </div>
+    <p class="lead">Fields are the building blocks of OpenCounter. They represent a discrete piece of information you are asking from the Applicant. They are then grouped into Pages.</p>
+
+    <p>Fields can accept all kinds of information---but it is important for the OpenCounter to know what kind of data you are asking for. Thus, there are 9 different types of Fields.</p>
+
+  	<p>Each Field can also have 1 - 3 special attributes.</p>
+  	<ul>
+  		<li>Required Fields must be answered by the Applicant.</li>
+  		<li>GIS Address Fields make calls to the GIS Server.</li>
+  		<li>Use Code Fields help determine proper use.</li>
+  	</ul>
+
+  	<p>For each Field, you can include a “Display lable” for Applicants as well as an internal-facing, “Admin label”. You can also include a “Field placeholder” that will show Applicant’s what type of information you are expecting. Give Applicants additional “Help info” like the kind of file formats you are looking for, if applicable.</p>
+  </div>
+
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="admin-forms-section">Forms</h1>
+    </div>
+    <p class="lead">Forms are a way to replicate your existing permitting process within OpenCounter.</p>
+
+    <p>Applicant responses solicited from any set of Fields can be grouped into a Form. When an Application is submitted, you’ll be able to download each Form---or group of answers---in order to easily match up with your existing permitting process and workflows.</p>
+
+    <p>To create or edit a Form, simply mix and match the Fields you would like to see grouped together for download.</p>
+
+<!--     <div class="bs-callout bs-callout-info">
+      <h4>Compiled or minified?</h4>
+      <p>Unless you plan on reading the CSS, go with minified stylesheets. It's the same code, just compacted. Minified styles use less bandwidth, which is good, especially in production environments.</p>
+    </div> -->
+
+  </div>
+
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="admin-fees-section">Fees</h1>
+    </div>
+    <p class="lead">Fees reflect your city’s Fee Schedule. </p>
+
+    <p>Each Fee has an associated “Base Cost”, a interval on which it recurs, and a processing time. This information let’s the Applicant know how much money and time they’ll need to make available for each Fee, and how often.</p>
+
+    <p>Fees can be triggered based on Requirements. When an Applicant meets certain conditions, then they alerted that they are responsible for paying the Fee. Requirements are based on the Applicant’s response to the Fields of your choice.</p>
+
+<!--     <div class="bs-callout bs-callout-info">
+      <h4></h4>
+      <p></p>
+    </div>
+ -->
+  </div>
+
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="admin-use-codes-section">Use Codes</h1>
+    </div>
+    <p class="lead">Fees reflect your city’s Fee Schedule. </p>
+
+    <p>Use Codes help OpenCounter determine whether an Applicant is allowed to pursue their business at a given location, whether they need to meet additional requirements, or whether the proposed use is prohibited.</p>
+
+    <p>Each Use Code has the following attributes:</p>
+    <ul>
+		<li>A numerical code</li>
+		<li>An Industry</li>
+		<li>A Sub-Industry</li>
+		<li>A Specific use</li>
+		<li>Associated keywords</li>
+	</ul>
+
+	<p>Use Codes are often reflective of national business classifications standards like SIC or NAICS Codes.</p>
+
+	<p>Each Zoning District or special district has a judgement for each different Use Code.</p>
+
+<!--     <div class="bs-callout bs-callout-info">
+      <h4></h4>
+      <p></p>
+    </div> -->
+
+  </div>
+
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="admin-zoning-districts-section">Zoning Districts</h1>
+    </div>
+    <p class="lead">Zoning Districts reflect your community’s Zoning Ordnance. Zoning determines whether businesses within each Use Code are appropriate at any given location.</p>
+
+    <p>These determinations are called Permissions. Within each Zoning District, each Use Code is either Permitted or Prohibited.</p>
+
+    <p>Each Zoning District also has the following attributes:</p>
+    <ul>
+    	<li>An Acronym Code</li>
+    	<li>A Classification</li>
+    	<li>A Name</li>
+    	<li>A Description</li>
+    	<li>Permissions</li>
+    </ul>
+
+<!--     <div class="bs-callout bs-callout-info">
+      <h4>Compiled or minified?</h4>
+      <p>Unless you plan on reading the CSS, go with minified stylesheets. It's the same code, just compacted. Minified styles use less bandwidth, which is good, especially in production environments.</p>
+    </div>
+ -->
+  </div>
+
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="admin-departments-section">Departments</h1>
+    </div>
+    <p class="lead">Departments are meant to reflect the Departments within your enterprise that are using the OpenCounter system.</p>
+
+    <p>Each Page is associated with one or more Department. As a result, Users that are members of Departments will recieve relevant information from Applications, and Applicants will be able to seek assistance from the appropriate staff members within your organization.</p>
+
+    <iframe width="100%" height="415" src="//www.youtube.com/embed/mXSu9DNdHC0" frameborder="0" allowfullscreen></iframe>
+
+<!--     <div class="bs-callout bs-callout-info">
+      <h4></h4>
+      <p></p>
+    </div> -->
+
+  </div>
+
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="admin-users-section">Users</h1>
+    </div>
+    <p class="lead">A User is a member of your organization that uses OpenCounter.</p>
+
+    <p>Users can monitor Applications, handle Help Requests on behalf of their Department, and receive Weekly Metrics e-mails.</p>
+
+  </div>
+
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="admin-settings-section">Settings</h1>
+    </div>
+    <p class="lead">This basic information helps differentiate your organization’s implementation of OpenCounter from others. It helps citizens know they are in the right place---and how to get to City Hall.</p>
+
+    <p>This page also contains important information regarding OpenCounter’s use of your organization’s GIS server, Google Analytics, and CNAME configuration.</p>
+
+</div>

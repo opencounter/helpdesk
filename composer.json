@@ -1,0 +1,25 @@
+{
+    "name": "open-counter-help"
+  , "description": "OpenCounter Customer Knowledge Base"
+  , "keywords": ["opencounter", "css"]
+  , "homepage": "http://opencounter.io"
+  , "authors": [
+      {
+        "name": "Joel Mahoney",
+        "email": "joel@opencounter.us"
+      },
+      {
+        "name": "Peter Koht",
+        "email": "peter@opencounter.us"
+      }
+    ]
+  , "support": {
+      "issues": "https://github.com/"
+    }
+  , "license": "Apache-2.0"
+  , "extra": {
+      "branch-alias": {
+        "dev-master": "3.0.x-dev"
+      }
+  }
+}

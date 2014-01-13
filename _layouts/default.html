@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    {% include header.html %}
+  </head>
+  <body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    {% include nav-main.html %}
+
+    <!-- Docs page layout -->
+    <div class="bs-header" id="content">
+      <div class="container">
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.lead }}</p>
+      </div>
+    </div>
+
+    <div class="container bs-docs-container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="bs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-sidenav">
+              {% if page.slug == "key-concepts" %}
+                {% include nav-key-concepts.html %}
+              {% elsif page.slug == "citizens" %}
+                {% include nav-citizens.html %}
+              {% elsif page.slug == "home" %}
+                {% include nav-home.html %}
+              {% elsif page.slug =="configuration" %}
+                {% include nav-configuration.html %}
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9" role="main">
+          {{ content }}
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <p>
+              <strong>Contact Info</strong>
+              <br />
+              <a href="https://twitter.com/opencounter" class="white">@opencounter</a>
+              <br />
+              <a href="mailto:hello@opencounter.us" class="white">hello@opencounter.us</a>
+              <br />
+              (415) 573-2407
+            </p>
+          </div>
+          <div class="col-md-8">
+            <div id="footer-logos">
+              <a href="http://cityofsantacruz.com" target="_blank"><img alt="Santacruz-logo" src="http://d1nm1xss7y0hl5.cloudfront.net/assets/santacruz-logo-3c7173f6495f04685d719c55c46e9646.png" /></a>
+              <img alt="Plus" src="http://d1nm1xss7y0hl5.cloudfront.net/assets/plus-912dce6a8e166f99f5c4a637d4fb5cfa.png" />
+              <a href="http://codeforamerica.org" target="_blank"><img alt="Codeforamerica-logo" src="http://d1nm1xss7y0hl5.cloudfront.net/assets/codeforamerica-logo-5f2f677313da6b7d1f6f4278317e1e1e.png" /></a>
+            </div>
+            <p class="small-text">OpenCounter was piloted through Code for America’s fellowship with the City of Santa Cruz in 2012.</p>
+            <p class="small-text">OpenCounter is supported by the John S. and James L. Knight Foundation's Knight News Challenge. Knight's mission is to promote informed and engaged communities.</p>
+          </div>
+        </div>
+      </div>
+      <div class="container text-center">
+        <br />
+        <small><em>©2013 Open Counter Enterprises Inc. &mdash; handmade in California Photo by <a href="http://www.flickr.com/photos/10384720@N00/" class="white">Jeff Kessler</a> • Map by <a href="https://twitter.com/mapbox" class="white">@mapbox</a> • Design by <a href="https://twitter.com/angelk" class="white">@angelk</a></em></small>
+      </div>
+    </div>
+  </footer>
+<!--         {% include social-buttons.html %}
+
+        <p>Designed and built with care by OpenCounter Industries<a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+        <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <ul class="footer-links">
+          <li>Currently v{{ site.current_version }}</li>
+          <li class="muted">&middot;</li>
+          <li><a href="{{ page.base_url }}2.3.2/">Bootstrap 2.3.2 docs</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="{{ site.blog }}">Blog</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="{{ site.repo }}/issues?state=open">Issues</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="{{ site.repo }}/releases">Releases</a></li>
+        </ul> -->
+
+    <!-- JS and analytics only. -->
+    {% include footer.html %}
+
+  </body>
+</html>

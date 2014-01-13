@@ -1,0 +1,31 @@
+<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="{{ page.base_url }}" class="navbar-brand"><img src="/docs-assets/img/opencounter-logo.png"></a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li{% if page.slug == "key-concepts" %} class="active"{% endif %}>
+          <a href="{{ page.base_url }}key-concepts">Key Concepts</a>
+        </li>
+        <li{% if page.slug == "configuration" %} class="active"{% endif %}>
+          <a href="{{ page.base_url }}configuration">Configuring OpenCounter</a>
+        </li>
+        <li{% if page.slug == "citizens" %} class="active"{% endif %}>
+          <a href="{{ page.base_url }}citizens">Reporting & Citizen Support</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="http://opencounter.us/admin" target="_blank">Admin Home</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
