@@ -29,7 +29,8 @@ base_url: "/helpdesk-3/"
       </div>
       <div class="col-xs-6 col-md-6">
         <a class="thumbnail">
-          <img src="/docs-assets/img/dummy-example.jpg" alt>
+          <!-- return img src to root when you decide on a domain -->
+          <img src="/helpdesk-3/docs-assets/img/dummy-example.jpg" alt>
         </a>
         <h4>Fee Requirement Rules</h4>
         <p>In other words, the rule determines whether an Applicant needs to answer a set of questions, or not, based on previous answers provided.</p>
@@ -41,14 +42,16 @@ base_url: "/helpdesk-3/"
     <div class="row bs-examples">
       <div class="col-xs-6 col-md-6">
         <a class="thumbnail">
-          <img src="/docs-assets/img/dummy-example.jpg" alt>
+          <!-- return img src to root when you decide on a domain -->
+          <img src="/helpdesk-3/docs-assets/img/dummy-example.jpg" alt>
         </a>
         <h4>Conditional Rules</h4>
         <p>Conditional Rules deal with the value of responses provided by Applicants. Often times, certain questions must be answered (or fees must be paid) if a value or greater than or less than a certain threshold.</p>
       </div>
       <div class="col-xs-6 col-md-6">
         <a class="thumbnail">
-          <img src="/docs-assets/img/dummy-example.jpg" alt>
+          <!-- return img src to root when you decide on a domain -->
+          <img src="/helpdesk-3/docs-assets/img/dummy-example.jpg" alt>
         </a>
         <h4>Yes or No Rules</h4>
         <p>Yes or No Rules deal with the Use Code, Zoning District, or Zoning Clearance associated with the application. They are simple “yes” or “no” rules based on one of those attributes.</p>
@@ -72,7 +75,7 @@ base_url: "/helpdesk-3/"
 
     <p>Each Admin User should be associated with one or more Departments. This attribute will ensure they receive relevant Help Requests from citizen and Form Downloads when applications are submitted.</p>
 
-    <p><a href="http://localhost:9001/configuration/#admin-departments-section">For detailed instructions and a screencast tutorial about creating and editing both Users and Departments, please visit the Configuring OpenCounter section.</a></p>
+    <p><a href="{{ page.base_url }}configuration/#admin-departments-section">For detailed instructions and a screencast tutorial about creating and editing both Users and Departments, please visit the Configuring OpenCounter section.</a></p>
   </div>
 
   <div class="bs-docs-section">
@@ -91,7 +94,7 @@ base_url: "/helpdesk-3/"
 
     <p>Moreover, you can determine which Permit Applicants see each Page--and by extension, which Fields you ask that they complete. Using logical rules like those described above, you can show certain pages to certain applicants based on answers they provide, or the location of their propospective business.</p>
 
-    <p><a href="http://localhost:9001/configuration/#admin-fields-section">For detailed instructions and a screencast tutorial about creating and editing Fields and Pages, please visit the Configuring OpenCounter section.</a></p>
+    <p><a href="{{ page.base_url }}configuration/#admin-fields-section">For detailed instructions and a screencast tutorial about creating and editing Fields and Pages, please visit the Configuring OpenCounter section.</a></p>
 
   </div>
 
@@ -107,7 +110,7 @@ base_url: "/helpdesk-3/"
 
     <p>As a result, OpenCounter allows Admin Users to create "Forms" that reflect their respective Departments' existing workflow. These Forms can be downloaded when an application is submitted, providing Departments with the information they need to keep their existing workflow running smoothly.
 
-    <p><a href="http://localhost:9001/configuration/#admin-forms-section">For detailed instructions and a screencast tutorial about creating and editing Forms, please visit the Configuring OpenCounter section.</a></p>
+    <p><a href="{{ page.base_url }}configuration/#admin-forms-section">For detailed instructions and a screencast tutorial about creating and editing Forms, please visit the Configuring OpenCounter section.</a></p>
 
   </div>
 
@@ -127,7 +130,8 @@ base_url: "/helpdesk-3/"
 
     <div class="row bs-examples">
       <div class="col-xs-12 col-md-12">
-        <img class="img-responsive" alt="Responsive image" src="/docs-assets/img/dummy-example.jpg">
+        <!-- return img src to root when you decide on a domain -->
+        <img class="img-responsive" alt="Responsive image" src="/helpdesk-3/docs-assets/img/dummy-example.jpg">
         <h4>A Zoning Clearance Map</h4>
         <p>Each Zoning District contains a judgement, or Zoning Clearance (Permission), for every business Use Code. By default, OpenCounter contains three different Zoning Clearances:</p>
         <ul>
@@ -138,7 +142,7 @@ base_url: "/helpdesk-3/"
       </div>
     </div>
     
-    <p><a href="http://localhost:9001/configuration/#admin-use-codes-section">For detailed instructions and a screencast tutorial about creating and editing Use Codes and Zoning Districts, please visit the Configuring OpenCounter section.</a></p>
+    <p><a href="{{ page.base_url }}configuration/#admin-use-codes-section">For detailed instructions and a screencast tutorial about creating and editing Use Codes and Zoning Districts, please visit the Configuring OpenCounter section.</a></p>
 
   </div>
 
@@ -155,19 +159,21 @@ base_url: "/helpdesk-3/"
     <div class="row bs-examples">
       <div class="col-xs-6 col-md-6">
         <a class="thumbnail">
-          <img src="/docs-assets/img/dummy-example.jpg" alt>
+          <!-- return img src to root when you decide on a domain -->
+          <img src="/helpdesk-3/docs-assets/img/dummy-example.jpg" alt>
         </a>
         <h4>Fees Estimated for Applicants</h4>
         <p>This screenshot should show what it looks like from the Applicant perspective.</p>
       </div>
       <div class="col-xs-6 col-md-6">
         <a class="thumbnail">
-          <img src="/docs-assets/img/dummy-example.jpg" alt>
+          <!-- return img src to root when you decide on a domain -->
+          <img src="/helpdesk-3/docs-assets/img/dummy-example.jpg" alt>
         </a>
         <h4>Fees Estimated for Admin Users</h4>
         <p>This screenshot should show what it looks like from the Admin Perspective</p>
       </div>
     </div>
 
-    <p><a href="http://localhost:9001/configuration/#admin-fees-section">For detailed instructions and a screencast tutorial about creating and editing Fees, please visit the Configuring OpenCounter section.</a></p>
+    <p><a href="{{ page.base_url }}configuration/#admin-fees-section">For detailed instructions and a screencast tutorial about creating and editing Fees, please visit the Configuring OpenCounter section.</a></p>
   </div>
