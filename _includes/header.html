@@ -5,15 +5,11 @@
 <meta name="author" content="">
 
 <title>
-  {% if page.title == "Bootstrap" %}
     {{ page.title }}
-  {% else %}
-    {{ page.title }} &middot; Bootstrap
-  {% endif %}
 </title>
 
 <!-- Bootstrap core CSS -->
-<link href="{{ page.base_url }}dist/css/open-counter-help.min.css" rel="stylesheet">
+<link href="{{ site.site_url }}dist/css/open-counter-help.min.css" rel="stylesheet">
 
 <!-- Documentation extras -->
     <link href="{{ page.base_url }}docs-assets/css/docs.css" rel="stylesheet">
