@@ -309,6 +309,9 @@ module.exports = function(grunt) {
   // Default task.
   grunt.registerTask('default', ['test', 'dist', 'build-customizer']);
 
+  //  Heroku deploy task
+  grunt.registerTask('heroku:production', ['build-customizer'])
+
   // Version numbering task.
   // grunt change-version-number --oldver=A.B.C --newver=X.Y.Z
   // This can be overzealous, so its changes should always be manually reviewed!

@@ -1,24 +1,24 @@
 {
     "name": "open-counter-help"
   , "description": "OpenCounter Customer Knowledge Base"
-  , "version": "0.1"
   , "keywords": ["opencounter", "css"]
   , "homepage": "http://opencounter.io"
-  , "author": ""
+  , "author": "alanjosephwilliams"
   , "scripts": { "test": "grunt test" }
-  // , "repository": {
-  //     "type": "git"
-  //   , "url": "https://github.com/alanjosephwilliams/helpdesk.git"
-  // }
-  // , "bugs": {
-  //     "url": "https://github.com/alanjosephwilliams/helpdesk"
-  // }
+  , "engines": {
+      "node": ">=0.4.7 <0.7.0",
+      "npm": ">=1.0.0"
+  }
   , "licenses": [
     {
         "type": "Apache-2.0"
       , "url": "http://www.apache.org/licenses/LICENSE-2.0"
     }
   ]
+  , "repository": {
+      "type": "git",
+      "url": "https://github.com/alanjosephwilliams/helpdesk-3.git"
+  }
   , "devDependencies": {
       "btoa": "~1.1.1"
     , "grunt": "~0.4.1"
