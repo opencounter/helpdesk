@@ -6,7 +6,7 @@ pygments:         true
 permalink:        pretty
 
 # Server
-destination:      ./_gh_pages
+destination:      ./_site
 exclude:          [".editorconfig", "vendor", ".gitignore", "bower.json", "composer.json", "CONTRIBUTING.md", "CNAME", "README.md", "less"]
 port:             9001
 
