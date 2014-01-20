@@ -40,8 +40,14 @@ base_url: "../"
     <h1 id="home-contact">Get in Touch</h1>
   </div>
 
-    <p class="lead">Don't find the answers you need? Don't hesitate to get in touch</p>
+    <p class="lead">Frequently Asked Questions</p>
 
-    <p>We love hearing from OpenCounter customers, and we are available at any time to help you make the most of the OpenCounter platform. The easiest way to request help is using in-app messaging--just click the question mark on the bottom right hand side of this page</p>
+    <div class="posts">
+    {% for post in site.categories.faq limit: 20 %}
+      <div class="post_info">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </div>
+    {% endfor %}
+    </div>
 
 </div>

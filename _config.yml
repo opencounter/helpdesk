@@ -3,7 +3,7 @@ markdown:         rdiscount
 pygments:         true
 
 # Permalinks
-permalink:        pretty
+permalink:        /:title.html
 
 # Server
 destination:      ./_site

@@ -117,7 +117,7 @@ body {
 .bs-docs-nav .navbar-nav > .active > a:hover {
   color: #fff;
   /* OC Blue 40% Darkened*/
-  background-color: #002F63;
+/*  background-color: #002F63;*/
 }
 .bs-docs-nav .navbar-toggle {
   border-color: #563d7c;
@@ -141,6 +141,7 @@ body {
   color: #777;
   text-align: center;
   border-top: 1px solid #e5e5e5;
+  background-color: #1795c9;
 }
 .footer-links {
   margin: 10px 0;
@@ -163,6 +164,54 @@ body {
   }
 }
 
+/*
+ * Footer styles added by AJW
+ *
+ * Part of the footer section above, but added to reflect the style of the OpenCounter marketing page.
+ */
+
+#footer-logos {
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+  color: white;
+}
+
+.contact-info a {
+  color: white;
+}
+
+.contact-info a:hover {
+  color: #fff573;
+  text-decoration: none;
+}
+
+.small-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.2em;
+  margin-bottom: 1em;
+  color: white;
+}
+
+small {
+  color: white;
+}
+
+small a {
+  color: white;
+}
+
+small a:hover {
+  color: #fff573;
+  text-decoration: none;
+}
 
 /*
  * Social buttons
@@ -210,10 +259,10 @@ body {
 
 .bs-docs-home,
 .bs-header {
-  /* 75% Lighter than OC Blue*/
-  color: #D6FFFF;
+  color: #1795c9;
   /*OC BLUE*/
-  background-color: #1795c9;
+  background-color: #fff;
+  border-bottom: 1px gray;
 }
 
 
@@ -298,7 +347,7 @@ body {
   text-shadow: 0 1px 0 rgba(0,0,0,.15);
 }
 .bs-header h1 {
-  color: #fff;
+  color: #1795c9;
 }
 .bs-header p {
   font-weight: 300;
@@ -1183,4 +1232,25 @@ h1[id] {
 .bs-docs-dl-options h4 {
   margin-top: 15px;
   margin-bottom: 5px;
+}
+
+
+/* FAQ STYLES */
+
+.faq-content {
+  margin: 20px;
+  line-height: 25px
+}
+
+.faq-container {
+  margin-bottom: 40px;
+  border: 1px solid rgba(0,0,0,0.10);
+}
+
+.faq-container h1 {
+  margin-bottom: 20px;
+}
+
+.faq-container p {
+  margin-bottom: 20px;
 }
