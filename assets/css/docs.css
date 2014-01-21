@@ -107,8 +107,8 @@ body {
   color: #fff;
 }
 .bs-docs-nav .navbar-nav > li > a {
-  /* OC Blue 75% lighter*/
-  color: #D6FFFF;
+  /* Gray replacing OC Blue 75% lighter*/
+  color: #eee;
 }
 .bs-docs-nav .navbar-nav > li > a:hover {
   color: #fff;
