@@ -9,7 +9,8 @@ base_url: "../"
 
 <!-- Overview
 ================================================== -->
-    <div class="col-md-6">
+  <div class="container bs-docs-container faq-container">
+    <div class="col-md-6 faq-column">
       <div class="faq-section">
         <h3>Supporting Your Users</h3>
         {% for post in site.categories.support %}
@@ -27,7 +28,7 @@ base_url: "../"
         {% endfor %}
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 faq-column">
       <div class="faq-section">
         <h3>Basic Questions</h3>
         {% for post in site.categories.basic %}
@@ -53,3 +54,4 @@ base_url: "../"
       {% endfor %}
       </div>
     </div>
+  </div>
