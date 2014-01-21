@@ -1236,19 +1236,17 @@ h1[id] {
 
 /* FAQ HOME PAGE STYLES ================================================== */
 
+.faq-section {
+  display: inline-block;
+}
 .post_info {
   font-size: 20px;
   display: inline-block;
   float: left;
-  max-width: 35%;
-  margin-right: 10px;
   margin-bottom: 20px;
 
 }
 
-.test-faq a {
-  color: red;
-}
 /* FAQ PAGE STYLES ================================================== */
 
 .faq-content {
