@@ -259,7 +259,6 @@ small a:hover {
 
 .bs-docs-home,
 .bs-header {
-  color: #1795c9;
   /*OC BLUE*/
   background-color: #fff;
   border-bottom: 1px gray;
@@ -1236,9 +1235,14 @@ h1[id] {
 
 /* FAQ HOME PAGE STYLES ================================================== */
 
-.faq-column {
+.faq-column#left {
   /* This is a magic number that needs to change */
-  padding-left: 0px;
+  padding: 0px 60px 0px 0px;
+}
+
+.faq-column#right {
+  /* This is a magic number that needs to change */
+  padding: 0px 0px 0px 0px;
 }
 
 .faq-section {
@@ -1246,21 +1250,27 @@ h1[id] {
 }
 
 .faq-section h3 {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .post_info {
   font-size: 18px;
   display: inline-block;
   float: left;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
 
+.post_info h4 {
+  line-height: 24px;
+}
+.post_info a:hover {
+  text-decoration: none;
 }
 
 /* FAQ PAGE STYLES ================================================== */
 
 .faq-content {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   padding: 0px 60px;
   line-height: 25px;
 }
@@ -1271,10 +1281,17 @@ h1[id] {
   border: 1px solid rgba(0,0,0,0.10);
 }
 
-.faq-container h2 {
+.faq-container h3 {
   margin-bottom: 20px;
 }
 
 .faq-container p {
   margin-bottom: 20px;
+}
+
+/* Footer */
+
+.text-center {
+  padding: 20px;
+  width: 100%;
 }
