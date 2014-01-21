@@ -1234,8 +1234,22 @@ h1[id] {
   margin-bottom: 5px;
 }
 
+/* FAQ HOME PAGE STYLES ================================================== */
 
-/* FAQ STYLES */
+.post_info {
+  font-size: 20px;
+  display: inline-block;
+  float: left;
+  max-width: 35%;
+  margin-right: 10px;
+  margin-bottom: 20px;
+
+}
+
+.test-faq a {
+  color: red;
+}
+/* FAQ PAGE STYLES ================================================== */
 
 .faq-content {
   margin: 20px;
