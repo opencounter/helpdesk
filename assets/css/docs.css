@@ -345,7 +345,7 @@ small a:hover {
   text-align: center;
   text-shadow: 0 1px 0 rgba(0,0,0,.15);
 }
-.bs-header h1 {
+.bs-header h2 {
   color: #1795c9;
 }
 .bs-header p {
@@ -370,7 +370,9 @@ small a:hover {
 @media (min-width: 992px) {
   .bs-header h1,
   .bs-header p {
-    margin-right: 380px;
+
+/*Magic Number, changed from 380px */
+    margin-right: 570px;
   }
 }
 
@@ -1256,6 +1258,7 @@ h1[id] {
 .post_info {
   font-size: 18px;
   display: inline-block;
+  width: 100%;
   float: left;
   margin-bottom: 10px;
 }
