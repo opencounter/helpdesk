@@ -354,6 +354,8 @@ small a:hover {
 }
 .bs-header .container {
   position: relative;
+  padding-right: 0px;
+  padding-left: 0px;
 }
 
 @media (min-width: 768px) {
@@ -372,7 +374,7 @@ small a:hover {
   .bs-header p {
 
 /*Magic Number, changed from 380px */
-    margin-right: 570px;
+/*    margin-right: 570px;*/
   }
 }
 
@@ -1235,7 +1237,28 @@ h1[id] {
   margin-bottom: 5px;
 }
 
+
+/* FAQ & Default PAGE STYLES ================================================== */
+
+/* See line 375 for margin changes associated with these styles */
+
+.header-content {
+  display: inline-block;
+  width: 100%;
+}
+
+.header-subnav {
+  display: inline-block;
+  width: auto;
+}
+
+.header-subnav .btn-default {
+  background-color: #eee;
+}
+
 /* FAQ HOME PAGE STYLES ================================================== */
+
+
 
 .faq-column#left {
   /* This is a magic number that needs to change */
