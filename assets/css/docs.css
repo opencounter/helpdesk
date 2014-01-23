@@ -1258,7 +1258,19 @@ h1[id] {
 
 /* FAQ HOME PAGE STYLES ================================================== */
 
+#search {
+  width: 100%;
+  height: 40px;
+}
 
+#search-query {
+  width: 100%;
+}
+
+#search-results {
+  height: auto;
+  width: auto;
+}
 
 .faq-column#left {
   /* This is a magic number that needs to change */
