@@ -32,11 +32,14 @@
       this.$entries = $(options.entries, this.$results),
       this.indexDataUrl = options.indexUrl;
       this.index = this.createIndex();
-      this.template = this.compileTemplate($(options.template));
-      
+      this.template = this.compileTemplate ($(options.template));
+      //  futzing below...trying to support latest version of mustache
+      // this.template = function (foo) { console.log(foo); }
+      // this.template = Mustache.render($(options.template).text());
+
       this.initialize();
     };
-        
+    
     LunrSearch.prototype.initialize = function() {
       var self = this;
       
@@ -58,7 +61,12 @@
     
     // compile search results template
     LunrSearch.prototype.compileTemplate = function($template) {      
-      return Mustache.render($template.text());
+      // return Mustache.render($template.text()); changes to support latest version of mustache
+      var template = $template.text();
+      Mustache.parse(template);
+      return function (view, partials) {
+        return Mustache.render(template, view, partials);
+      };
     };
         
     // load the search index data
@@ -122,7 +130,6 @@
         this.displayResults(results);
       }
     };
-    
     LunrSearch.prototype.displayResults = function(entries) {
       var $entries = this.$entries,
         $results = this.$results;
