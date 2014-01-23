@@ -1253,23 +1253,41 @@ h1[id] {
 }
 
 .header-subnav .btn-default {
-  background-color: #eee;
+  background-color: #1795c9;
+  border-color: #fff;
+}
+
+.header-subnav .active {
+  background-color: #1484b2;
+}
+
+.header-subnav .btn-default h4 {
+  color: white;
 }
 
 /* FAQ HOME PAGE STYLES ================================================== */
 
-#search {
+/* = = = Search Form and Results ========================*/
+
+/* Bundle for Search form and buttons*/
+.input-group {
   width: 100%;
-  height: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 40px;
 }
 
+/* Search form ID */
 #search-query {
-  width: 100%;
+  font-size: 18px;
 }
 
+/* Search results */
 #search-results {
   height: auto;
   width: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .faq-column#left {

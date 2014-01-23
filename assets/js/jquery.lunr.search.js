@@ -116,12 +116,17 @@
       }));
     };
     
+    // Reomove the above function
+    // create a variable for the button element that we will bind the event
+
+
     LunrSearch.prototype.search = function(query) {
       var entries = this.entries;
       
       if (query.length <= 2) {
         this.$results.hide();
         this.$entries.empty();
+        $('.faq-list').show();
       } else {
         var results = $.map(this.index.search(query), function(result) {
           return $.grep(entries, function(entry) { return entry.id === parseInt(result.ref, 10) })[0];
@@ -137,9 +142,14 @@
       $entries.empty();
       
       if (entries.length === 0) {
-        $entries.append('<p>Nothing found.</p>')
+        $entries.append('<div class="alert alert-warning">Nothing found! Try some other keywords.</div>')
+        $('.search-results-header').hide();
       } else {
+        $('.faq-list').hide();
         $entries.append(this.template({entries: entries}));
+        // This is a manual addition hiding the FAQ list. 
+        // We will need to reveal it again at some point
+        console.log("results!");
       }
       
       $results.show();
@@ -173,6 +183,8 @@
     indexUrl  : '/search.json',     // Url for the .json file containing search index source data (containing: title, url, date, body)
     results   : '#search-results',  // selector for containing search results element
     entries   : '.entries',         // selector for search entries containing element (contained within results above)
-    template  : '#search-results-template'  // selector for Mustache.js template
+    template  : '#search-results-template',  // selector for Mustache.js template
+
+    faqList   : '.faq-list'  // selector for existing FAQ list, which is hidden and shown based on search results
   };
 })(jQuery);
