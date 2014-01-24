@@ -1,0 +1,30 @@
+<!-- Search Partial -->
+
+<div class="input-group">
+<!--  <form action="/search" method="get"> -->
+    <input type="text" class="form-control" id="search-query" name="q" placeholder="Search" autocomplete="off">
+<!--    <span class="input-group-btn">
+      <button class="btn btn-default" id="search-submit" type="button">Search</button>
+    </span> -->
+<!--  </form> glyphicon glyphicon-search -->
+</div>
+
+<section id="search-results" style="display: none;">
+  <div class="search-results-header">
+    <h5>All Results for Search Query String</h5>
+  </div>
+  <div class="entries">
+  {% raw %}
+  <script id="search-results-template" type="text/mustache">
+    {{#entries}}
+      <article>
+        <h4>
+          <a href="{{url}}">{{title}}</a>
+        </h4>
+      </article>
+    {{/entries}}
+  </script>
+  {% endraw %}
+  </div>
+  <div>
+</section>

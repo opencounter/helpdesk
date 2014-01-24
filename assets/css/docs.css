@@ -1343,7 +1343,9 @@ h1[id] {
 
 .faq-container {
   margin-bottom: 40px;
-  padding: 15px;
+  padding-top: 15px;
+  padding-right: 60px;
+  padding-left: 60px;
 /*  border: 1px solid rgba(0,0,0,0.10);*/
 }
 
@@ -1364,3 +1366,7 @@ h1[id] {
 
 /* OVERALL PAGE STYLES ================================================== */
 
+.container {
+  padding-left: 60px;
+  padding-right: 60px;
+}

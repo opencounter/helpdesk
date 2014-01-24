@@ -12,13 +12,12 @@
 <script src="{{ page.base_url }}assets/js/ajw.js"></script>
 
 
-<!-- {% if page.slug == "home" %} -->
+<!-- Would be nice to have a liquid operation here to prevent loading of extra scripts of pages with no search (Tutorials, Best Practices, Gloassary?) -->
 <script src="{{ page.base_url }}assets/js/lunr.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="{{ page.base_url }}assets/js/mustache.js" type="text/javascript" charset="utf-8"></script>
 <script src="{{ page.base_url }}assets/js/date.format.js" type="text/javascript" charset="utf-8"></script>
 <script src="{{ page.base_url }}assets/js/URI.js" type="text/javascript" charset="utf-8"></script>
 <script src="{{ page.base_url }}assets/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
-<!-- {% endif %} -->
 
 <script>
   window.twttr = (function (d,s,id) {
