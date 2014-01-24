@@ -25,7 +25,7 @@ cdn_js:           //netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js
 
 #vars
 
-# site_url:		/helpdesk-3/
+site_url:		/help/
 
 # Plugins
 
