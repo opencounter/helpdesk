@@ -1283,6 +1283,12 @@ h1[id] {
   padding: 20px 16px;
 }
 
+.search-submit {
+  color: #333;
+  background-color: #ebebeb;
+  font-size: 18px;
+  padding: 11px 30px 11px 12px;
+}
 .form-control:focus {
   border-color: rgba(0,0,0,0.25);
   color: #404040;
@@ -1294,7 +1300,6 @@ h1[id] {
   width: auto;
   border-bottom: 1px solid
   border-color: rgba(0,0,0,0.20);
-  padding-bottom: 40px;
   margin-bottom: 40px;
 }
 

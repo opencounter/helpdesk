@@ -27,3 +27,12 @@
     return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
   }(document, "script", "twitter-wjs"));
 </script>
+
+<script>
+	$(document).on("autocomplete:search:submit", function(){
+		$('.faq-list').hide();
+	}); 
+    $(document).on("autocomplete:search:noresults", function(){
+    	$('.faq-list').show();
+    });
+</script>

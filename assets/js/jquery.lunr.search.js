@@ -111,50 +111,53 @@
     LunrSearch.prototype.bindKeypress = function() {
       var self = this;
 
-      this.$elem.bind('keyup', debounce(function() {
-        self.search($(this).val());
+      $('body').delegate( '.search-submit', "click", function(e){
+        self.search($("#search-query").val());
+      });
+
+      this.$elem.bind('keyup', debounce(function(e) {
+        if( e.keyCode==13 ) {
+          self.search($(this).val());
+        }
       }));
     };
-    
-    // Reomove the above function
-    // create a variable for the button element that we will bind the event
+
+
 
 
     LunrSearch.prototype.search = function(query) {
       var entries = this.entries;
-      
-      if (query.length <= 2) {
-        this.$results.hide();
-        this.$entries.empty();
-        $('.faq-list').show();
-      } else {
+
         var results = $.map(this.index.search(query), function(result) {
           return $.grep(entries, function(entry) { return entry.id === parseInt(result.ref, 10) })[0];
         });
-        
+
         this.displayResults(results);
-      }
     };
     LunrSearch.prototype.displayResults = function(entries) {
       var $entries = this.$entries,
         $results = this.$results;
-        
+
       $entries.empty();
-      
+      console.log("clearning results?");
+
       if (entries.length === 0) {
         $entries.append('<div class="alert alert-warning">Nothing found! Try some other keywords.</div>')
         $('.search-results-header').hide();
+        console.log("no results!");
+        $(document).trigger( "autocomplete:search:noresults" );
       } else {
-        $('.faq-list').hide();
+        console.log("fire event");
+        $(document).trigger( "autocomplete:search:submit" );
         $entries.append(this.template({entries: entries}));
         // This is a manual addition hiding the FAQ list. 
         // We will need to reveal it again at some point
         console.log("results!");
       }
-      
+
       $results.show();
     };
-    
+
     // Populate the search input with 'q' querystring parameter if set
     LunrSearch.prototype.populateSearchFromQuery = function() {
       var uri = new URI(window.location.search.toString());
