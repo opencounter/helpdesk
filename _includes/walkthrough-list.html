@@ -1,0 +1,36 @@
+  <div class="walkthroughs">
+    <h4>Admin Walkthroughs</h4>
+      <div class="col-md-4">
+        <ul>
+          {% for post in site.categories.walkthrough limit:4 %}
+          <li>
+            <div class="post_info">
+              <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <ul>
+          {% for post in site.categories.walkthrough limit:4 offset:4 %}
+          <li>
+            <div class="post_info">
+              <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <ul>
+          {% for post in site.categories.walkthrough limit:4 offset:8 %}
+          <li>
+            <div class="post_info">
+              <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
