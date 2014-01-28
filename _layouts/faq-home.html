@@ -10,13 +10,14 @@
     <!-- Docs master nav -->
     {% include nav-main.html %}
 
-    <!-- Docs subnav and title -->
+    <!-- Docs subnav and header / title -->
     {% include subnav.html %}
 
     <div class="container bs-docs-container faq-container">
       {% include search.html %}
       <div class="row">
         <div class="col-md-12" role="main">
+          <!-- Walkthrough Partial -->
           {% include walkthrough-list.html %}
           {{ content }}
         </div>

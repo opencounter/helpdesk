@@ -346,6 +346,7 @@ small a:hover {
 }
 .bs-header h2 {
   color: #1795c9;
+  margin-bottom: 30px;
 }
 .bs-header p {
   font-weight: 300;
@@ -1244,7 +1245,7 @@ h1[id] {
 .header-content {
   display: inline-block;
   width: 100%;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .header-subnav {
@@ -1280,14 +1281,15 @@ h1[id] {
 /* Search form ID */
 #search-query {
   font-size: 18px;
-  padding: 20px 16px;
+  padding: 24px 16px;
 }
 
 .search-submit {
   color: #333;
   background-color: #ebebeb;
-  font-size: 18px;
-  padding: 11px 30px 11px 12px;
+  font-size: 24px;
+  line-height: 36px;
+  padding-right: 36px;
 }
 .form-control:focus {
   border-color: rgba(0,0,0,0.25);
@@ -1298,14 +1300,22 @@ h1[id] {
 #search-results {
   height: auto;
   width: auto;
+  padding: 0px 30px;
   border-bottom: 1px solid
   border-color: rgba(0,0,0,0.20);
   margin-bottom: 40px;
 }
 
+#search-results article h4 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid;
+  border-color: rgba(0,0,0,0.20);
+}
+
 .faq-list {
   height: auto;
   width: auto;
+  margin: 0px 30px;
 }
 
 .faq-column#left {
@@ -1332,6 +1342,7 @@ h1[id] {
   width: 100%;
   float: left;
   margin-bottom: 10px;
+  margin-right: 40px;
 }
 
 .post_info h4 {
@@ -1413,7 +1424,11 @@ h1[id] {
   border: 1px solid #dee8ef;
   background-color: #f2f8fc;
   border-radius: 5px;
-  margin: 20px 0px;
+  margin: 0px 0px 40px 0px;
+}
+
+.walkthroughs-column {
+  padding-top: 15px;
 }
 
 .walkthroughs li {
@@ -1423,8 +1438,15 @@ h1[id] {
 
 }
 
-.walkthroughs h4 {
-  margin-top: 20px;
-  padding-left: 20px;
+.walkthroughs h3 {
+  margin: 30px;
   color: #0085ce;
+}
+
+.walkthroughs .walkthroughs-subhead {
+  margin: 0px 30px 20px 30px;
+}
+
+.walkthroughs ul {
+  padding-left: 10px;
 }

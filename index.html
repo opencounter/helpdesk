@@ -10,7 +10,6 @@ base_url: "../"
 <!-- Overview
 ================================================== -->
 
-  {{ include walkthrough-list.html }}
 
   <div class="faq-list">
     <div class="col-md-6 faq-column" id="left">
@@ -18,7 +17,7 @@ base_url: "../"
         <h3>Basic Questions</h3>
         {% for post in site.categories.basic %}
         <div class="post_info">
-          <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+          <p><a href="{{ post.url }}">{{ post.title }}</a></p>
         </div>
         {% endfor %}
       </div>
@@ -26,7 +25,7 @@ base_url: "../"
         <h3>Metrics & Management</h3>
         {% for post in site.categories.metrics %}
         <div class="post_info">
-          <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+          <p><a href="{{ post.url }}">{{ post.title }}</a></p>
         </div>
         {% endfor %}
       </div>
@@ -36,7 +35,7 @@ base_url: "../"
         <h3>Supporting Your Users</h3>
         {% for post in site.categories.support %}
         <div class="post_info">
-          <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+          <p><a href="{{ post.url }}">{{ post.title }}</a></p>
         </div>
         {% endfor %}
       </div>
@@ -44,7 +43,7 @@ base_url: "../"
         <h3>Configuring OpenCounter</h3>
         {% for post in site.categories.configuration %}
         <div class="post_info">
-          <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+          <p><a href="{{ post.url }}">{{ post.title }}</a></p>
         </div>
         {% endfor %}
       </div>
@@ -52,7 +51,7 @@ base_url: "../"
         <h3>Zoning & Land Use</h3>
         {% for post in site.categories.zoning %}
         <div class="post_info">
-          <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+          <p><a href="{{ post.url }}">{{ post.title }}</a></p>
         </div>
       {% endfor %}
       </div>

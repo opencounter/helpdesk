@@ -1,6 +1,7 @@
   <div class="walkthroughs">
-    <h4>Admin Walkthroughs</h4>
-      <div class="col-md-4">
+    <h3>Admin Walkthroughs</h3>
+    <p class="lead walkthroughs-subhead">Try these page-by-page walkthroughs of the Admin Area of OpenCounter. You'll find helpful videos, best practices, and more.</p>
+      <div class="walkthroughs-column col-md-4">
         <ul>
           {% for post in site.categories.walkthrough limit:4 %}
           <li>
@@ -11,7 +12,7 @@
           {% endfor %}
         </ul>
       </div>
-      <div class="col-md-4">
+      <div class="walkthroughs-column col-md-4">
         <ul>
           {% for post in site.categories.walkthrough limit:4 offset:4 %}
           <li>
@@ -22,7 +23,7 @@
           {% endfor %}
         </ul>
       </div>
-      <div class="col-md-4">
+      <div class="walkthroughs-column col-md-4">
         <ul>
           {% for post in site.categories.walkthrough limit:4 offset:8 %}
           <li>
