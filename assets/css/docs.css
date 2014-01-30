@@ -1359,6 +1359,14 @@ h1[id] {
   line-height: 25px;
 }
 
+.faq-content p {
+  font-size: 16px;
+}
+
+.faq-content .lead {
+  font-size: 21px;
+}
+
 .faq-container {
   margin-bottom: 40px;
   padding-top: 15px;
@@ -1449,4 +1457,11 @@ h1[id] {
 
 .walkthroughs ul {
   padding-left: 10px;
+}
+
+.walkthrough-screenshot {
+  display: block;
+  width: 66%;
+  margin: 40px auto;
+  border: 1px solid #eee;
 }
