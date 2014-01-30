@@ -1,23 +1,34 @@
 ---
 layout: faq-page
-title: Fields Area Walkthrough
+title: Creating and Editing Fields
 slug: walkthrough-fields
 categories: faq, walkthrough
 lead: ""
 base_url: "../"
 ---
 
-<h3>Admin Walkthrough: The "Fields" Area</h3>
+<h3>Walkthrough: The "Fields" Area</h3>
 
-<p class="lead">Fields are the building blocks of OpenCounter. They represent a discrete piece of information you are asking from the Applicant. They are then grouped into Pages.</p>
+<p class="lead">Fields are the building blocks of OpenCounter. They represent a discrete piece of information you are asking from the Applicant. They are then grouped into <a href="/walkthrough-pages.html">Pages</a>.</p>
 
-<p>Fields can accept all kinds of information---but it is important for the OpenCounter to know what kind of data you are asking for. Thus, there are 9 different types of Fields.</p>
+<p>When OpenCounter is first configured, the <b class="term-of-art" id="existing-permit-form">Existing Permit Forms</b> from your organization's various permit processes were collected. They were broken down into their componenet "fields", and entered into the OpenCounter platform. Those fields were then grouped into Pages, and Pages were grouped into Sections.</p>
 
-<p>Each Field can also have 1 - 3 special attributes.</p>
+<p>This approach makes for a much more pleasant permit application experience. Once an applicant has provided a piece of information once, it can be used across many different permits.</p>
+
+<p>Fields can accept all kinds of information. OpenCounter provides a drop-down of different data types, which helps structure applicant responses.</p>
+
+<p>For basic or essential questions, you can make Fields required. This means that permit applicants will not be allowed to proceed until they provide a response.</p>
+
+
+<p>"Required" is just one of a handful of special attributes you can assign to each field. These includes:</p>
 <ul>
 	<li>Required Fields must be answered by the Applicant.</li>
+	<li>Business Name field helps propogate information across the application.</li>
+	<li>Employee count fields will be added to the summary statistics on the <a href="/walkthrough-dashboard.html">Dashboard</a>.</li>
 	<li>GIS Address Fields make calls to the GIS Server.</li>
 	<li>Use Code Fields help determine proper use.</li>
 </ul>
+
+<img class="walkthrough-screenshot" src="/assets/img/walkthrough-fields-edit.png">
 
 <p>For each Field, you can include a “Display lable” for Applicants as well as an internal-facing, “Admin label”. You can also include a “Field placeholder” that will show Applicant’s what type of information you are expecting. Give Applicants additional “Help info” like the kind of file formats you are looking for, if applicable.</p>
