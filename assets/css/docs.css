@@ -1441,7 +1441,7 @@ h1[id] {
 
 .walkthroughs li {
   display: inline-block;
-  width: auto;
+  width: 100%;
   margin: 0px 8px;
 
 }
