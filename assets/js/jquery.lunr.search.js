@@ -136,6 +136,7 @@
 
       $entries.empty();
       $('.results-feedback').empty();
+      $('#search-results').removeClass('results');
       console.log("cleaning results?");
 
       if (entries.length === 0) {
@@ -154,6 +155,7 @@
         $('.search-results-header').show();
         console.log("html updates?")
         $entries.append(this.template({entries: entries}));
+        $('#search-results').addClass('results');
         console.log("results!");
       }
 
