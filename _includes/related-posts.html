@@ -1,0 +1,33 @@
+<div class="related-posts">
+  {% assign related = page.categories %}
+  {% if related contains 'basic' %}
+    <p class="category">Read another article from <a href="/basic-questions.html">Basic Questions:</a></p>
+  {% elsif related contains 'walkthrough' %}
+    <p class="category">Read another article about <a href="/admin-walkthroughs.html">Admin Walkthroughs</a></p>
+  {% elsif related contains 'metrics' %}
+    <p class="category">Read another article about <a href="/metrics.html">Metrics and Management</a></p>
+  {% elsif related contains 'support' %}
+    <p class="category">Read another article about <a href="/support.html">Supporting Your Users</a></p>
+  {% elsif related contains 'zoning' %}
+    <p class="category">Read another article about <a href="/zoning.html">Zoning and Land Use</a></p>
+  {% elsif related contains 'configuration' %}
+    <p class="category">Read another article about <a href="/configuration.html">Configuration</a></p>
+  {% else %}
+    <p><a href="/index.html">Return to Help Home</a></p>
+  {% endif %}
+
+<!-- {% for post in site.posts limit: 3 %}
+  {% assign match = false %}
+  {% for category in post.categories %}
+    {% if post.categories == related %}
+      {% assign match = true %}
+    {% endif %}
+  {% endfor %}
+  {% if match %}
+    <a class="post" href="{{ post.url }}">{{ post.title }}</a>
+  {% endif %}
+{% endfor %}
+
+ -->
+
+</div> 

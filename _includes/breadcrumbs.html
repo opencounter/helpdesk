@@ -1,0 +1,19 @@
+<div class="breadcrumb">
+ {% assign related = page.categories %}
+  {% if related contains 'basic' %}
+    <a class="category" href="/basic-questions.html">Basic Questions </a><b class="active"> / </b>
+  {% elsif related contains 'walkthrough' %}
+    <a class="category" href="/admin-walkthroughs.html">Admin Walkthroughs </a><b class="active"> / </b>
+  {% elsif related contains 'metrics' %}
+    <a class="category" href="/metrics.html">Metrics and Management </a><b class="active"> / </b>
+  {% elsif related contains 'support' %}
+    <a class="category" href="/support.html">Supporting Your Users </a><b class="active"> / </b>
+  {% elsif related contains 'zoning' %}
+    <a class="category" href="/zoning.html">Zoning and Land Use </a><b class="active"> / </b>
+  {% elsif related contains 'configuration' %}
+    <a class="category" href="/configuration.html">Configuration </a><b class="active"> / </b>
+  {% else %}
+    <a class="category" href="index.html">Help Home</a><b class="active"> / </b>
+  {% endif %}
+   <p class="active">{{ page.title }} </p>
+</div>
