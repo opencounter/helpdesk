@@ -1307,8 +1307,7 @@ h1[id] {
   height: auto;
   width: auto;
   padding: 0px 30px;
-  border-bottom: 1px solid
-  border-color: rgba(0,0,0,0.20);
+  border-radius: 5px;
   margin-bottom: 40px;
 }
 

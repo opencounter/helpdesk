@@ -33,10 +33,6 @@
       this.indexDataUrl = options.indexUrl;
       this.index = this.createIndex();
       this.template = this.compileTemplate ($(options.template));
-      //  futzing below...trying to support latest version of mustache
-      // this.template = function (foo) { console.log(foo); }
-      // this.template = Mustache.render($(options.template).text());
-
       this.initialize();
     };
     
@@ -61,7 +57,7 @@
     
     // compile search results template
     LunrSearch.prototype.compileTemplate = function($template) {      
-      // return Mustache.render($template.text()); changes to support latest version of mustache
+      // return Mustache.render($template.text(); changes to support latest version of mustache
       var template = $template.text();
       Mustache.parse(template);
       return function (view, partials) {
@@ -108,6 +104,8 @@
       return entry;
     };
     
+    //  Custom code for click and enter triggers
+
     LunrSearch.prototype.bindKeypress = function() {
       var self = this;
 
@@ -121,8 +119,6 @@
         }
       }));
     };
-
-
 
 
     LunrSearch.prototype.search = function(query) {
@@ -139,7 +135,8 @@
         $results = this.$results;
 
       $entries.empty();
-      console.log("clearning results?");
+      $('.results-feedback').empty();
+      console.log("cleaning results?");
 
       if (entries.length === 0) {
         $entries.append('<div class="alert alert-warning">Nothing found! Try some other keywords.</div>')
@@ -149,9 +146,14 @@
       } else {
         console.log("fire event");
         $(document).trigger( "autocomplete:search:submit" );
+        $('.results-feedback').append("Found ");
+        $('.results-feedback').append(entries.length);
+        $('.results-feedback').append(" results for '");
+        $('.results-feedback').append($("#search-query").val());
+        $('.results-feedback').append("'");
+        $('.search-results-header').show();
+        console.log("html updates?")
         $entries.append(this.template({entries: entries}));
-        // This is a manual addition hiding the FAQ list. 
-        // We will need to reveal it again at some point
         console.log("results!");
       }
 
