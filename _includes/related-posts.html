@@ -1,4 +1,5 @@
 <div class="related-posts">
+  <p class="glossary">Too much jargon? Read our <a href="/glossary.html">Glossary of Terms</a> to help clear things up.</p>
   {% assign related = page.categories %}
   {% if related contains 'basic' %}
     <p class="category">Read another article from <a href="/basic-questions.html">Basic Questions:</a></p>
@@ -13,7 +14,7 @@
   {% elsif related contains 'configuration' %}
     <p class="category">Read another article about <a href="/configuration.html">Configuration</a></p>
   {% else %}
-    <p><a href="/index.html">Return to Help Home</a></p>
+    <p class="category"><a href="/index.html">Return to Help Home</a></p>
   {% endif %}
 
 <!-- {% for post in site.posts limit: 3 %}

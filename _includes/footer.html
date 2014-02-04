@@ -31,10 +31,16 @@
 <script>
 	$(document).on("autocomplete:search:submit", function(){
 		$('.faq-list').hide();
-	}); 
-    $(document).on("autocomplete:search:noresults", function(){
-    	$('.faq-list').show();
-    });
+	});
+  $(document).on("autocomplete:search:noresults", function(){
+    $('.faq-list').show();
+    $('#search-results').hide();
+    console.log("hide search results?");
+  });
+  $(document).on("autocomplete:search:noresults", function() {
+    $('.alert-warning').addClass('alert-dismissable');
+    $('.alert-warning').append('<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>');
+  });
 </script>
 
 <!-- Intercom -->

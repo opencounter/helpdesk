@@ -1546,7 +1546,6 @@ h1[id] {
 /* Related posts  ==========*/
 
 .related-posts {
-  text-align: right;
   width: 100%;
   border-top: 1px solid rgba(0,0,0,.2);
   margin-top: 20px;
@@ -1554,7 +1553,17 @@ h1[id] {
   display: inline-block;
 }
 
+.glossary {
+  width: auto;
+  display: inline-block;
+  float: left;
+  font-size: 12px;
+  font-weight: bold;
+}
+
 .related-posts .category {
+  width: auto;
+  float: right;
   font-size: 12px;
   font-weight: bold;
   display: inline-block;
