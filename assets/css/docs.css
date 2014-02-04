@@ -89,6 +89,8 @@ body {
  .navbar {
   /* overriding 1px border on default bootstrap style */
   border: 0px;
+  /* overriding 50px min-height on new Bootstrap*/
+  min-height: 40px;
  }
 
 .bs-docs-nav {
@@ -97,7 +99,17 @@ body {
   background-color: #000;
   border-color: #1795C9;;
   box-shadow: 0 1px 0 rgba(255,255,255,.1);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222), to(#111));
+  background-image: -webkit-linear-gradient(#222, #111);
+  background-image: -moz-linear-gradient(#222, #111);
+  background-image: -o-linear-gradient(#222, #111);
+  background-image: linear-gradient(#222, #111);
 }
+
+.bs-docs-nav .logo {
+  max-height: 50px;
+}
+
 .bs-docs-nav .navbar-collapse {
   border-color: #1795C9;
 }
@@ -107,7 +119,7 @@ body {
   color: #fff;
 }
 .bs-docs-nav .navbar-nav > li > a {
-  color: #eee;
+  padding: 10px 15px;
 }
 .bs-docs-nav .navbar-nav > li > a:hover {
   color: #fff;
@@ -127,6 +139,19 @@ body {
 }
 
 
+
+
+@media (min-width: 768px) {
+  .navbar-right {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-right {
+    display: block;
+  }
+}
 /*
  * Footer
  *
@@ -1300,6 +1325,8 @@ h1[id] {
   font-size: 24px;
   line-height: 36px;
   padding-right: 36px;
+  /* glyphicon default override */
+  top: 0px;
 }
 .form-control:focus {
   border-color: rgba(0,0,0,0.25);
