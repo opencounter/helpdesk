@@ -350,7 +350,8 @@ small a:hover {
   padding: 30px 0px 0px 0px; /* side padding builds on .container 15px, so 30px */
   font-size: 16px;
   text-align: center;
-  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+  /* Get rid of shadows for legibility */
+/*  text-shadow: 0 1px 0 rgba(0,0,0,.15);*/
 }
 .bs-header h2 {
   color: #1795c9;
@@ -1528,6 +1529,7 @@ h1[id] {
 
 .related-posts .category {
   font-size: 12px;
+  font-weight: bold;
   display: inline-block;
 }
 
