@@ -1,5 +1,8 @@
 <div class="related-posts">
+  {% if page.slug != "glossary" %}
   <p class="glossary">Too much jargon? Read our <a href="/glossary.html">Glossary of Terms</a> to help clear things up.</p>
+  {% endif %}
+
   {% assign related = page.categories %}
   {% if related contains 'basic' %}
     <p class="category">Read another article from <a href="/basic-questions.html">Basic Questions:</a></p>
