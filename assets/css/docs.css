@@ -1324,10 +1324,16 @@ h1[id] {
   background-color: #ebebeb;
   font-size: 24px;
   line-height: 36px;
-  padding-right: 36px;
+  padding-right: 24px;
+  padding-left: 24px;
   /* glyphicon default override */
   top: 0px;
 }
+
+.glyphicon:empty {
+  width: 3em;
+}
+
 .form-control:focus {
   border-color: rgba(0,0,0,0.25);
   color: #404040;
