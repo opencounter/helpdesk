@@ -43,6 +43,50 @@
   });
 </script>
 
+<!-- Retrive city account from cookie, use to change nav links -->
+
+<script>
+
+  function createCookie(name, value) {
+    var cookie = name + "=" + escape(value) + ";";
+    document.cookie = cookie;
+  };
+
+  createCookie("account", "test");
+
+  function getCookieValue (key) {
+    var value;
+    if (document.cookie) {
+      var chunks = document.cookie.split(/;\s?/);
+      for (var i = 0; i < chunks.length; i++) {
+        var arr = chunks[i].split('=');
+        if (arr[0] && key == arr[0]) {
+          value = arr[1];
+          break;
+        }
+      }
+    }
+    return value;
+  };
+
+  subdomain = getCookieValue("account");
+
+  $(document).ready(function() {
+    console.log(subdomain);
+    replaceNavLinks();
+  });
+
+  function replaceNavLinks() {
+    $(".subdomain-link").each(function(link) {
+      console.log(subdomain);
+      link = $(this);
+      link.attr("href", "http://" + subdomain + link.attr("href"));
+      console.log("alive");
+    });
+  };
+
+</script>
+
 <!-- Intercom -->
 <script id="IntercomSettingsScriptTag">
   window.intercomSettings = {
