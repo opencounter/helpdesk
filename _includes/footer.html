@@ -50,18 +50,24 @@
   function getURLParams() {
     var url = window.location.href;
       var parts = url.split('?');
-      var params = parts[1];
-      var data = params.split('&');
-      var key;
-      var collection = {};
-      var pieces;
+      if (parts[1] !== undefined) {
+        console.log(parts[1]);
+        var params = parts[1];
+        var data = params.split('&');
+        var key;
+        var collection = {};
+        var pieces;
 
-      // Iterate data and get key value pairs
-      for(key in data){
-        pieces = data[key].split('=');
-        collection[pieces[0]] = pieces[1];
-      };
-      return collection;
+        // Iterate data and get key value pairs
+        for(key in data){
+          pieces = data[key].split('=');
+          collection[pieces[0]] = pieces[1];
+        };
+        return collection;
+      } else {
+        console.log("no subdomain");
+        navLinksNull();
+      }
   };
 
   // Get params
@@ -101,6 +107,14 @@
       console.log(subdomain);
       link = $(this);
       link.attr("href", "http://" + subdomain + link.attr("href"));
+    });
+  };
+
+  function navLinksNull() {
+    $(".subdomain-link").each(function(link) {
+      console.log("marketing site")
+      link = $(this);
+      link.attr("href", "http://opencounter.us");
     });
   };
 
