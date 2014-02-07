@@ -99,7 +99,9 @@
       // console.log(document.cookie);
       getCookieValue();
       subdomain = getCookieValue("account");
-      if (subdomain == params.account) {
+      if (params == undefined) {
+        //  don't set document.cookie if params.account is undefined. do nothing.
+      } else if (subdomain == params.account) {
         // if the cookie is the same as the params, do nothing;
       } else {
         //  if not, update the cookie.
