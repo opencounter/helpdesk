@@ -50,10 +50,10 @@
   function getURLParams() {
     var url = window.location.href;
     var parts = url.split('?');
-    console.log(parts[1]);
+    // console.log(parts[1]);
     var params = parts[1];
     if  (params != undefined) {
-      console.log("params are defined");
+      // console.log("params are defined");
       var data = params.split('&');
       var key;
       var collection = {};
@@ -66,7 +66,7 @@
       };
       return collection;
     } else {
-        console.log("undefined params");
+        // console.log("undefined params");
         var data = params;
         var key;
         var collection = {}
@@ -80,22 +80,31 @@
   var nextWeek = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
 
   // Set params as cookie
-
   setCookieValue(params);
 
   function setCookieValue(params) {
     if (document.cookie == undefined) {
-      //  If no cookie, check to see if params exist
+      //  If no cookie, check to see if params exist.
       if (params.account == undefined) {
-        console.log("no cookie to set");
+        // console.log("no cookie to set");
       } else {
         document.cookie = "account="+params.account+"; expires="+nextWeek.toGMTString()+"; path=/";
-        console.log(document.cookie);
-        console.log("cookie now set");
+        // console.log(document.cookie);
+        // console.log("cookie now set");
       };
     } else {
       // or else, cookie is already defined, so do nothing.
-      console.log("cookie is already set");
+      // console.log("cookie is already set");
+      // console.log(params);
+      // console.log(document.cookie);
+      getCookieValue();
+      subdomain = getCookieValue("account");
+      if (subdomain == params.account) {
+        // if the cookie is the same as the params, do nothing;
+      } else {
+        //  if not, update the cookie.
+        document.cookie = "account="+params.account+"; expires="+nextWeek.toGMTString()+"; path=/";
+      }
     }
   };
 
@@ -123,13 +132,13 @@
     console.log(subdomain);
     if (subdomain != undefined) {
       $(".subdomain-link").each(function(link) {
-        console.log(subdomain);
+        // console.log(subdomain);
         link = $(this);
         link.attr("href", "http://" + subdomain + link.attr("href"));
       });
     } else {
       $(".subdomain-link").each(function(link) {
-        console.log("marketing site")
+        // console.log("marketing site")
         link = $(this);
         link.attr("href", "http://opencounter.us");
       });
