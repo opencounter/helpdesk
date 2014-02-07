@@ -49,36 +49,55 @@
   // Get the params
   function getURLParams() {
     var url = window.location.href;
-      var parts = url.split('?');
-      if (parts[1] !== undefined) {
-        console.log(parts[1]);
-        var params = parts[1];
-        var data = params.split('&');
-        var key;
-        var collection = {};
-        var pieces;
+    var parts = url.split('?');
+    console.log(parts[1]);
+    var params = parts[1];
+    if  (params != undefined) {
+      console.log("params are defined");
+      var data = params.split('&');
+      var key;
+      var collection = {};
+      var pieces;
 
-        // Iterate data and get key value pairs
-        for(key in data){
-          pieces = data[key].split('=');
-          collection[pieces[0]] = pieces[1];
-        };
-        return collection;
-      } else {
-        console.log("no subdomain");
-        navLinksNull();
-      }
+      // Iterate data and get key value pairs
+      for(key in data){
+        pieces = data[key].split('=');
+        collection[pieces[0]] = pieces[1];
+      };
+      return collection;
+    } else {
+        console.log("undefined params");
+        var data = params;
+        var key;
+        var collection = {}
+    }
   };
 
   // Get params
   var params = getURLParams();
-
   // Get date for next week
   var today = new Date();
   var nextWeek = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
 
   // Set params as cookie
-  document.cookie = "account="+params.account+"; expires="+nextWeek.toGMTString()+"; path=/";
+
+  setCookieValue(params);
+
+  function setCookieValue(params) {
+    if (document.cookie == undefined) {
+      //  If no cookie, check to see if params exist
+      if (params.account == undefined) {
+        console.log("no cookie to set");
+      } else {
+        document.cookie = "account="+params.account+"; expires="+nextWeek.toGMTString()+"; path=/";
+        console.log(document.cookie);
+        console.log("cookie now set");
+      };
+    } else {
+      // or else, cookie is already defined, so do nothing.
+      console.log("cookie is already set");
+    }
+  };
 
   // Function for retrieving cookie and using to update href links in main nav
   function getCookieValue (key) {
@@ -97,25 +116,24 @@
   };
 
   subdomain = getCookieValue("account");
+  console.log(subdomain);
+  replaceNavLinks(subdomain);
 
-  $(document).ready(function() {
-    replaceNavLinks();
-  });
-
-  function replaceNavLinks() {
-    $(".subdomain-link").each(function(link) {
-      console.log(subdomain);
-      link = $(this);
-      link.attr("href", "http://" + subdomain + link.attr("href"));
-    });
-  };
-
-  function navLinksNull() {
-    $(".subdomain-link").each(function(link) {
-      console.log("marketing site")
-      link = $(this);
-      link.attr("href", "http://opencounter.us");
-    });
+  function replaceNavLinks(subdomain) {
+    console.log(subdomain);
+    if (subdomain != undefined) {
+      $(".subdomain-link").each(function(link) {
+        console.log(subdomain);
+        link = $(this);
+        link.attr("href", "http://" + subdomain + link.attr("href"));
+      });
+    } else {
+      $(".subdomain-link").each(function(link) {
+        console.log("marketing site")
+        link = $(this);
+        link.attr("href", "http://opencounter.us");
+      });
+    }
   };
 
 </script>
