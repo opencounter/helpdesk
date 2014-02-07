@@ -138,11 +138,19 @@
         link = $(this);
         link.attr("href", "http://" + subdomain + link.attr("href"));
       });
+      $(".help-link").each(function(link) {
+        link = $(this);
+        link.attr("href", "http://help.opencounter.us");
+      });
     } else {
       $(".subdomain-link").each(function(link) {
         // console.log("marketing site")
         link = $(this);
         link.attr("href", "http://opencounter.us");
+      });
+      $(".help-link").each(function(link) {
+        link = $(this);
+        link.attr("href", "http://help.opencounter.us");
       });
     }
   };
