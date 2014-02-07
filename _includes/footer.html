@@ -43,9 +43,38 @@
   });
 </script>
 
-<!-- Retrive city account from cookie, use to change nav links -->
+<!-- Retrive URL param for city account, save as cookie, use to change nav links -->
 <script>
 
+  // Get the params
+  function getURLParams() {
+    var url = window.location.href;
+      var parts = url.split('?');
+      var params = parts[1];
+      var data = params.split('&');
+      var key;
+      var collection = {};
+      var pieces;
+
+      // Iterate data and get key value pairs
+      for(key in data){
+        pieces = data[key].split('=');
+        collection[pieces[0]] = pieces[1];
+      };
+      return collection;
+  };
+
+  // Get params
+  var params = getURLParams();
+
+  // Get date for next week
+  var today = new Date();
+  var nextWeek = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
+
+  // Set params as cookie
+  document.cookie = "account="+params.account+"; expires="+nextWeek.toGMTString()+"; path=/";
+
+  // Function for retrieving cookie and using to update href links in main nav
   function getCookieValue (key) {
     var value;
     if (document.cookie) {
